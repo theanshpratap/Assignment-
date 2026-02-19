@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABES Engineering College</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    .top-header {
+        background-color: antiquewhite;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .college-name {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .search-box input {
+        padding: 6px;
+    }
+
+    .search-box button {
+        padding: 6px 10px;
+        cursor: pointer;
+    }
+
+    /* ===== MAIN NAVBAR ===== */
+    .main-nav {
+        background-color: silver;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+
+    /* ===== CONTENT GRID ===== */
+    .layout {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background-color: bisque;
+        padding: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Main Content */
+    .content {
+        padding: 20px;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+
+    @media (max-width: 768px) {
+        .layout {
+            grid-template-columns: 1fr;
+        }
+
+        .main-nav ul {
+            grid-auto-flow: row;
+        }
+
+        .top-header {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+    <img src="Logo.png" alt="Logo" width="60" height="60">
+    <div class="college-name">ABES Engineering College</div>
+    <div class="search-box">
+        <input type="search" placeholder="Search">
+        <button>Search</button>
+    </div>
+</div>
+
+<!-- MAIN NAVBAR -->
+<nav class="main-nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- CONTENT AREA -->
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Faculty</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h2>Welcome to ABES Engineering College</h2>
+        <p>
+            This is a fully responsive layout using CSS Grid.
+            Resize the screen to see the responsive behavior.
+        </p>
+
+        <div class="card">
+            <h4>Notice Board</h4>
+            <p>
+                Add announcements, updates, or important information here.
+            </p>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
